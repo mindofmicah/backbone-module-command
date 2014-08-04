@@ -8,7 +8,7 @@ use Prophecy\Argument;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Collection;
 use Mustache_Engine;
-use MindOfMicah\Modules\Forms;
+
 use MindOfMicah\Modules\BackboneComponent;
 
 class CollectionGeneratorSpec extends ObjectBehavior
@@ -35,7 +35,6 @@ class CollectionGeneratorSpec extends ObjectBehavior
         $c->get('model')->willReturn(new BackboneComponent('path','modules/tacos/models/taco', 'Taco'))->shouldBeCalled();
         $f = new BackboneComponent('js/modules/tacos/collections/tacos.js', 'tacos/tacos', 'TacoCollection');
         $this->beConstructedWith($filesystem, $mustache);
-        $path = 'js/modules/';
 
         $this->generate($f,  'template.stub', $c);
     }
