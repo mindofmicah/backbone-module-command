@@ -1,6 +1,6 @@
 {
     "name": "mindofmicah/backbone-module-command",
-    "description": "",
+    "description": "Use Laravel's Artisan to quickly create an AMD Backbone Module",
     "authors": [
         {
             "name": "micah",
