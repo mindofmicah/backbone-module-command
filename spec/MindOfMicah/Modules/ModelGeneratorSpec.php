@@ -30,7 +30,6 @@ class ModelGeneratorSpec extends ObjectBehavior
 
         $f = new BackboneComponent('js/modules/tacos/models/taco.js', 'real', 'label');
         $this->beConstructedWith($filesystem, $mustache);
-        $path = 'js/modules/';
 
         $this->generate($f,  'template.stub', new Collection);
     }
