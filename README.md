@@ -1,6 +1,6 @@
 backbone-module-command
 =======================
-Adds a Laravel command to quickly generate the base files for a new Backbone module to be included vi RequireJS.
+Adds a Laravel command to quickly generate the base files for a new Backbone module to be included via RequireJS.
 
 Installation
 =======================
