@@ -21,9 +21,11 @@ class IndexGeneratorSpec extends ObjectBehavior
         $this->shouldHaveType('MindOfMicah\Modules\IndexGenerator');
     }
 
-    public function it_should_generate_a_model(Filesystem $filesystem, Mustache_Engine $mustache, Collection $c)
+    public function it_should_generate_a_module(Filesystem $filesystem, Mustache_Engine $mustache, Collection $c)
     {
         $filesystem->get('template.stub')->shouldBeCalled()->willReturn('template');
+        $filesystem->put('js/modules/tacos/index.js', 'output')->shouldBeCalled();
+        
         $mustache->render(
             'template', [
                 'model_path'      => 'modules/tacos/models/taco',
@@ -34,14 +36,12 @@ class IndexGeneratorSpec extends ObjectBehavior
                 'view'            => 'TacoView',
             ]  
         )->shouldBeCalled()->willReturn('output');
-        $filesystem->put('js/modules/tacos/index.js', 'output')->shouldBeCalled();
-
-        $f = new BackboneComponent('js/modules/tacos/index.js', 'index', 'Index');
-        $this->beConstructedWith($filesystem, $mustache);
-
+        
         $c->get('model')->willReturn(new BackboneComponent('','modules/tacos/models/taco', 'Taco'))->shouldBeCalled();
         $c->get('view')->willReturn(new BackboneComponent('','modules/tacos/views/taco_view', 'TacoView'))->shouldBeCalled();
         $c->get('collection')->willReturn(new BackboneComponent('','modules/tacos/collections/tacos', 'TacoCollection'))->shouldBeCalled();
-        $this->generate($f,  'template.stub', $c);
+
+        $f = new BackboneComponent('js/modules/tacos/index.js', 'index', 'Index');
+        $this->generate($f, 'template.stub', $c);
     }
 }
