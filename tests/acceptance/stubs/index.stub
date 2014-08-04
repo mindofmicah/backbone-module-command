@@ -1,0 +1,12 @@
+define([
+    'modules/tacos/models/taco',
+    'modules/tacos/collections/tacos',
+    'modules/tacos/views/taco_view'
+], function (Taco, TacoCollection, TacoView) {
+    'use strict';
+
+    // public API
+    return {
+    
+    }
+});

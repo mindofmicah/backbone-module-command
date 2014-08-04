@@ -1,0 +1,27 @@
+{
+    "name": "mindofmicah/modules",
+    "description": "",
+    "authors": [
+        {
+            "name": "micah",
+            "email": "micah@whamdonk.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*",
+        "illuminate/filesystem": "4.2.*"
+    },
+    "require-dev" : {
+        "phpspec/phpspec" : "2.*",
+        "codeception/codeception" : "2.*", 
+        "mustache/mustache" : "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "MindOfMicah\\Modules\\": "src/",
+            "" : "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}

@@ -1,0 +1,12 @@
+define([
+    '{{ model_path }}',
+    '{{ collection_path }}',
+    '{{ view_path }}'
+], function ({{ model }}, {{ collection }}, {{ view }}) {
+    'use strict';
+
+    // public API
+    return {
+    
+    }
+});
