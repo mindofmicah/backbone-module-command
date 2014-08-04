@@ -8,7 +8,7 @@ use Prophecy\Argument;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Collection;
 use Mustache_Engine;
-use MindOfMicah\Modules\Forms;
+
 use MindOfMicah\Modules\BackboneComponent;
 
 class ModelGeneratorSpec extends ObjectBehavior
