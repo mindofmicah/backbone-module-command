@@ -6,7 +6,7 @@ use Prophecy\Argument;
 
 use Illuminate\Filesystem\Filesystem;
 use Mustache_Engine;
-use MindOfMicah\Modules\Forms;
+
 use MindOfMicah\Modules\BackboneComponent;
 use Illuminate\Support\Collection;
 
