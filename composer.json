@@ -1,7 +1,7 @@
 {
     "name": "mindofmicah/backbone-module-command",
     "description": "Use Laravel's Artisan to quickly create an AMD Backbone Module",
-    "keywords": ["laravel", "backbone", "requirejsr", "AMD", "generator"],
+    "keywords": ["laravel", "backbone", "requirejs", "AMD", "generator"],
     "authors": [
         {
             "name": "micah",
